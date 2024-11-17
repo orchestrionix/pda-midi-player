@@ -1,0 +1,94 @@
+[Version]
+Signature   = "$Windows NT$"
+Provider    = "Decap"
+CESignature = "$Windows CE$"
+
+[CEStrings]
+AppName     = "Midi Player"
+InstallDir  = %CE1%\DecapMidiPlayer
+
+[Strings]
+EXEShortcut	= "Decap Midi Player"
+
+[CEDevice]
+
+[CEDevice.PPC30_MIPS]
+ProcessorType           = 4000      ; MIPS R4000 CPU
+
+[CEDevice.PPC30_SH3]
+ProcessorType           = 10003     ; SH3 CPU
+
+[CEDevice.PPC30_ARM]
+ProcessorType           = 2577     ; ARM
+
+[CEDevice.PPC30_PII]
+ProcessorType           = 686       ; 686
+
+[CEDevice.PPC30_CEF]
+
+[SourceDisksNames]              	; CPU-independent files
+1 = ,"Common Files",,Common     	; files are in the relative path "common"
+
+[SourceDisksNames.PPC30_MIPS]   	; R4000-specific files for Pocket PC
+2 = ,"PPC30 MIPS Files",,PPC30_MIPS 	; files are in the relative path "ppc30_mips"
+
+[SourceDisksNames.PPC30_SH3]    	; SH3-specific files for Pocket PC
+2 = ,"PPC30 SH3 Files",,PPC30_SH3   	; files are in the relative path "ppc30_sh3"
+
+[SourceDisksNames.PPC30_ARM]    	; SH3-specific files for Pocket PC
+2 = ,"PPC30 ARM Files",,PPC30_ARM   	; files are in the relative path "ppc30_sh3"
+
+[SourceDisksNames.PPC30_PII]    	; SH3-specific files for Pocket PC
+2 = ,"PPC30 SH3 Files",,PPC30_PII   	; files are in the relative path "ppc30_sh3"
+
+[SourceDisksNames.PPC30_CEF]    	; SH3-specific files for Pocket PC
+2 = ,"PPC30 CEF Files",,PPC30_CEF   	; files are in the relative path "ppc30_sh3"
+
+[SourceDisksFiles]
+    ; CPU-independent files
+decap.msk		= 1
+decap.msk.l		= 1
+decap2.msk		= 1
+decap2.msk.l		= 1
+gm.psb			= 1
+
+
+    ; CPU-specific files
+MidiPlayer.exe          = 2     ; main executable
+
+[DefaultInstall]
+CopyFiles   = Files.InstallDir, Files.ModDir; Required INF sections that lists the files to be copied
+AddReg      = Reg.Version1			; Required INF sections that lists the registry entries to be created
+CEShortcuts = Links				; Optional INF sections that lists the shortcuts to be created
+
+[DestinationDirs]
+Files.InstallDir    = 0,%InstallDir%
+Files.ModDir	    = 0,%CE5%
+Links               = 0,%CE17%
+DefaultDestDir      = 0,%InstallDir%
+
+[Files.InstallDir]
+"decap.msk"
+"decap.msk.l"
+"decap2.msk"
+"decap2.msk.l"
+"MidiPlayer.exe"
+"gm.psb"
+
+[Files.ModDir]
+
+[Reg.Version1]
+;HKCR,.mid,,0,midfile
+;HKCR,.midi,,0,midfile
+;HKCR,.rmi,,0,midfile
+;HKCR,midfile,,0,"MIDI Sequence"
+;HKCR,midfile\DefaultIcon,,0,%InstallDir%\MidiPlayer.exe",-106"
+;HKCR,midfile\Shell\Open\Command,,0,"""%InstallDir%\MidiPlayer.exe""" %%1
+HKCR,.mdl,,2,midlist
+HKCR,midlist,,2,"Midi Music List"
+HKCR,midlist\DefaultIcon,,2,%InstallDir%\MidiPlayer.exe",-107"
+HKCR,midlist\Shell\Open\Command,,2,"""%InstallDir%\MidiPlayer.exe""" %%1
+
+
+[Links]
+%EXEShortcut%,0,MidiPlayer.exe, %CE17%

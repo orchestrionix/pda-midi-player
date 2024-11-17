@@ -1,0 +1,1451 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MODPLAYER           ICON    DISCARDABLE     "ModPlayer.ICO"
+IDI_FILE                ICON    DISCARDABLE     "file.ico"
+IDI_LIST                ICON    DISCARDABLE     "icon1.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDM_MENU SHMENUBAR MOVEABLE PURE 
+BEGIN
+    IDM_MENU, 9,
+    I_IMAGENONE, ID_MENU, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_MENUITEM40028, ID_MENU, 0,
+    I_IMAGENONE, 0, TBSTATE_ENABLED, TBSTYLE_SEP, 0, 0, NOMENU,
+    0, 40013, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 0, ID_PL_OPEN, 1,
+    1, 40014, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 0, ID_PL_SAVE, 1,
+    2, 40012, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 0, ID_PL_ADD, 1,
+    3, 40015, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 0, ID_PL_EDIT, 1,
+    6, 40016, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 0, ID_PL_NEW, 1,
+    8, ID_MENUITEM40031, TBSTATE_ENABLED, 
+    TBSTYLE_GROUP | TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, 0, 0, 1,
+    9, 40072, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, 0, ID_CHANNEL, 2,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDM_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        POPUP "&Instrument Settings", GRAYED
+        BEGIN
+            MENUITEM "Change MidiChan/Act.Sensing", ID_IS_MIDICHANNEL
+            MENUITEM "Change Instrument's Delay",   ID_CHAN_DELAY
+            MENUITEM "COM Port Volume Compression", ID_COM_VCOMPRESSION
+            MENUITEM "SoftSynth Volume Compression", ID_SOFT_VCOMPRESSION
+            MENUITEM "Real Piano CH1 Settings",     ID_PIANO_CH1_SETTINGS
+        END
+        POPUP "Skin"
+        BEGIN
+            MENUITEM "Normal",                      ID_SKIN_1
+            MENUITEM "Large",                       ID_SKIN_2
+        END
+        MENUITEM "&Options",                    ID_OPTIONS
+        MENUITEM "&Volumes",                    ID_VOLUMES
+        MENUITEM "&COM Port Settings",          ID_COMPORT
+        MENUITEM "&About",                      40003
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP ""
+    BEGIN
+        POPUP "Stereo Separation"
+        BEGIN
+            MENUITEM "0%",                          ID_PAN_SEP_0
+            MENUITEM "50%",                         ID_PAN_SEP_50
+            MENUITEM "100%",                        ID_PAN_SEP_100
+            MENUITEM "150%",                        ID_PAN_SEP_150
+            MENUITEM "200%",                        ID_PAN_SEP_200
+        END
+        POPUP "Reverb"
+        BEGIN
+            MENUITEM "Off",                         ID_REVERB_OFF
+            MENUITEM "Low",                         ID_REVERB_LOW
+            MENUITEM "Middle",                      ID_REVERB_MIDDLE
+            MENUITEM "High",                        ID_REVERB_HIGH
+        END
+        POPUP "Key"
+        BEGIN
+            MENUITEM "6",                           ID_TRANSPOSE12
+            MENUITEM "5",                           ID_TRANSPOSE11
+            MENUITEM "4",                           ID_TRANSPOSE10
+            MENUITEM "3",                           ID_TRANSPOSE9
+            MENUITEM "2",                           ID_TRANSPOSE8
+            MENUITEM "1",                           ID_TRANSPOSE7
+            MENUITEM "0",                           ID_TRANSPOSE6
+            MENUITEM "-1",                          ID_TRANSPOSE5
+            MENUITEM "-2",                          ID_TRANSPOSE4
+            MENUITEM "-3",                          ID_TRANSPOSE3
+            MENUITEM "-4",                          ID_TRANSPOSE2
+            MENUITEM "-5",                          ID_TRANSPOSE1
+            MENUITEM "-6",                          ID_TRANSPOSE0
+        END
+        POPUP "Tempo"
+        BEGIN
+            MENUITEM "-4",                          ID_TEMPO0
+            MENUITEM "-3",                          ID_TEMPO1
+            MENUITEM "-2",                          ID_TEMPO2
+            MENUITEM "-1",                          ID_TEMPO3
+            MENUITEM "0",                           ID_TEMPO4
+            MENUITEM "1",                           ID_TEMPO5
+            MENUITEM "2",                           ID_TEMPO6
+            MENUITEM "3",                           ID_TEMPO7
+            MENUITEM "4",                           ID_TEMPO8
+        END
+        MENUITEM "Swap &Stereo",                ID_SWAP_STEREO
+        MENUITEM "Sh&uffle",                    ID_RANDOM
+        MENUITEM "&Repeat",                     ID_REPEAT
+        MENUITEM "S&ingle",                     ID_SINGLE
+        MENUITEM "Auto Advance",                ID_AUTOADVANCE
+        MENUITEM "&All Controller Off",         ID_ALLCONTROLLEROFF
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 140, 153
+STYLE WS_POPUP | WS_CAPTION
+EXSTYLE 0x80000000L
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    CTEXT           "DECAP Herentals Midi Player",IDC_STATIC,17,7,106,8,
+                    SS_NOPREFIX
+    RTEXT           "Right:",IDC_STATIC,25,72,20,8
+    LTEXT           "Play / Pause",IDC_STATIC,53,72,40,8
+    RTEXT           "Left:",IDC_STATIC,29,83,16,8
+    LTEXT           "Stop",IDC_STATIC,53,83,16,8
+    RTEXT           "Up:",IDC_STATIC,33,94,12,8
+    LTEXT           "Previous Track",IDC_STATIC,53,94,48,8
+    RTEXT           "Down:",IDC_STATIC,23,105,22,8
+    LTEXT           "Next Track",IDC_STATIC,53,105,36,8
+    GROUPBOX        "Buttons",IDC_STATIC,16,61,106,58
+    PUSHBUTTON      "&Register",IDC_REGISTER,44,132,50,14
+    LTEXT           "This program is registered.",IDC_LICENSED,26,121,93,8,
+                    NOT WS_VISIBLE
+    CTEXT           "http://www.focusbyte.com",IDC_STATIC,22,51,97,8
+    LTEXT           "www.decap-herentals.be",IDC_STATIC,29,18,85,8
+    LTEXT           "email: tony@decap.be",IDC_STATIC,37,29,73,8
+    LTEXT           "Powered by Focusbyte PowerSynth",IDC_STATIC,15,42,115,8
+END
+
+IDD_EDIT_PLAYLIST DIALOG DISCARDABLE  0, 0, 137, 157
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Playlist"
+FONT 8, "System"
+BEGIN
+    LISTBOX         IDC_PLAYLIST,7,7,123,125,LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Up",IDC_MOVE_UP,7,136,27,14,WS_DISABLED
+    PUSHBUTTON      "Down",IDC_MOVE_DOWN,37,136,27,14,WS_DISABLED
+    PUSHBUTTON      "Remove",IDC_DELETE,67,136,33,14,WS_DISABLED
+    PUSHBUTTON      "Sort",IDC_SORT,103,136,27,14
+END
+
+IDD_REGISTER DIALOG DISCARDABLE  0, 0, 139, 157
+STYLE WS_POPUP | WS_CAPTION
+EXSTYLE 0x80000000L
+CAPTION "Please Register"
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT1,47,71,38,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,94,71,38,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_USERNAME,47,54,85,14,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "-",IDC_STATIC,85,74,10,8
+    DEFPUSHBUTTON   "&Unlock",IDOK,7,89,49,14
+    PUSHBUTTON      "&Remind me later",IDC_REMIND,7,106,72,14
+    PUSHBUTTON      "&Exit",IDCANCEL,82,106,50,14
+    LTEXT           "This software has not been registered.",IDC_STATIC,7,7,
+                    125,11
+    LTEXT           "If you have ordered this program,\nplease enter here the provided registration code, then click ""Unlock"":",
+                    IDC_STATIC,7,27,125,25
+    LTEXT           "You have ? days left for evaluation.",IDC_TRIAL_LEFT,7,
+                    17,125,8
+    LTEXT           "Serial:",IDC_STATIC,24,57,21,8
+    LTEXT           "Reg. Code:",IDC_STATIC,7,73,38,8
+    LTEXT           "Please send email to tony@decap.be with your name and the serial number shown above to order this program.",
+                    IDC_STATIC,7,124,125,26
+END
+
+IDD_SKIN DIALOG DISCARDABLE  0, 0, 137, 157
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Select Skin"
+FONT 8, "System"
+BEGIN
+    LISTBOX         IDC_SKINLIST,7,45,123,85,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_PATH,7,17,123,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Skin Path:",IDC_STATIC,7,7,37,8
+    LTEXT           "Skin List:",IDC_STATIC,7,35,33,8
+    CTEXT           "More skins available at:\nhttp://www.intelliart.com",
+                    IDC_STATIC,7,133,123,17
+END
+
+IDD_DIR_TREE DIALOG DISCARDABLE  0, 0, 137, 157
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Add MIDI"
+FONT 8, "System"
+BEGIN
+    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,
+                    7,7,123,127
+    PUSHBUTTON      "&OK",IDOK,7,136,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,80,136,50,14
+END
+
+IDD_CHANNEL DIALOG DISCARDABLE  0, 0, 137, 158
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Channels"
+FONT 8, "System"
+BEGIN
+    CONTROL         "1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,20,15,11
+    CONTROL         "2",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,35,15,11
+    CONTROL         "3",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,50,15,11
+    CONTROL         "4",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,65,15,11
+    CONTROL         "5",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,80,15,11
+    CONTROL         "6",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,95,15,11
+    CONTROL         "7",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,110,15,11
+    CONTROL         "8",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,125,15,11
+    CONTROL         "9",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,67,20,19,11
+    CONTROL         "10",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,67,35,19,11
+    CONTROL         "11",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,67,50,19,11
+    CONTROL         "12",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,67,65,19,11
+    CONTROL         "13",IDC_CHECK13,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,67,80,19,11
+    CONTROL         "14",IDC_CHECK14,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,67,95,19,11
+    CONTROL         "15",IDC_CHECK15,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,67,110,19,11
+    CONTROL         "16",IDC_CHECK16,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,67,125,19,11
+    LTEXT           "Solo",IDC_STATIC,26,7,14,8
+    LTEXT           "Chn",IDC_STATIC,9,7,13,8
+    LTEXT           "Solo",IDC_STATIC,90,7,13,8
+    LTEXT           "Chn",IDC_STATIC,72,7,13,8
+    PUSHBUTTON      "100",IDC_BUTTON1,42,20,20,10
+    PUSHBUTTON      "100",IDC_BUTTON2,42,35,20,10
+    PUSHBUTTON      "100",IDC_BUTTON3,42,50,20,10
+    PUSHBUTTON      "100",IDC_BUTTON4,42,65,20,10
+    PUSHBUTTON      "100",IDC_BUTTON5,42,80,20,10
+    PUSHBUTTON      "100",IDC_BUTTON6,42,95,20,10
+    PUSHBUTTON      "100",IDC_BUTTON7,42,110,20,10
+    PUSHBUTTON      "100",IDC_BUTTON8,42,125,20,10
+    PUSHBUTTON      "100",IDC_BUTTON9,106,20,20,10
+    PUSHBUTTON      "100",IDC_BUTTON10,106,35,20,10,WS_DISABLED
+    PUSHBUTTON      "100",IDC_BUTTON11,106,50,20,10
+    PUSHBUTTON      "100",IDC_BUTTON12,106,65,20,10
+    PUSHBUTTON      "100",IDC_BUTTON13,106,80,20,10
+    PUSHBUTTON      "100",IDC_BUTTON14,106,95,20,10
+    PUSHBUTTON      "100",IDC_BUTTON15,106,110,20,10
+    PUSHBUTTON      "100",IDC_BUTTON16,106,125,20,10
+    LTEXT           "Prog",IDC_STATIC,45,7,16,8
+    LTEXT           "Prog",IDC_STATIC,109,7,15,8
+    PUSHBUTTON      "S",IDC_BUTTON17,25,20,14,10
+    PUSHBUTTON      "S",IDC_BUTTON18,25,35,14,10
+    PUSHBUTTON      "S",IDC_BUTTON19,25,50,14,10
+    PUSHBUTTON      "S",IDC_BUTTON20,25,65,14,10
+    PUSHBUTTON      "S",IDC_BUTTON21,25,80,14,10
+    PUSHBUTTON      "S",IDC_BUTTON22,25,95,14,10
+    PUSHBUTTON      "S",IDC_BUTTON23,25,110,14,10
+    PUSHBUTTON      "S",IDC_BUTTON24,25,125,14,10
+    PUSHBUTTON      "S",IDC_BUTTON25,89,20,14,10
+    PUSHBUTTON      "S",IDC_BUTTON26,89,35,14,10
+    PUSHBUTTON      "S",IDC_BUTTON27,89,50,14,10
+    PUSHBUTTON      "S",IDC_BUTTON28,89,65,14,10
+    PUSHBUTTON      "S",IDC_BUTTON29,89,80,14,10
+    PUSHBUTTON      "S",IDC_BUTTON30,89,95,14,10
+    PUSHBUTTON      "S",IDC_BUTTON31,89,110,14,10
+    PUSHBUTTON      "S",IDC_BUTTON32,89,125,14,10
+    PUSHBUTTON      "Enable All",IDC_BUTTON33,87,139,43,12
+END
+
+IDD_SEL_PROG DIALOG DISCARDABLE  0, 0, 137, 157
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Playlist"
+FONT 8, "System"
+BEGIN
+    LISTBOX         IDC_PLAYLIST,7,7,123,143,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+END
+
+IDD_OPTIONS DIALOG DISCARDABLE  0, 0, 137, 157
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Options"
+FONT 8, "System"
+BEGIN
+    COMBOBOX        IDC_COMBO1,55,49,75,30,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,55,64,75,30,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Output Port 1",IDC_STATIC,7,51,48,8
+    LTEXT           "Output Port 2",IDC_STATIC,7,66,48,8
+    LTEXT           "SoftSynt Vol. Threshold",IDC_STATIC,7,20,76,8
+    EDITTEXT        IDC_EDIT1,89,18,27,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "%",IDC_STATIC,119,21,10,8
+    LTEXT           "COM Port Delay",IDC_STATIC,30,35,52,8
+    EDITTEXT        IDC_EDIT2,89,33,27,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "ms",IDC_STATIC,120,36,10,8
+    LTEXT           "Max Poly:",IDC_STATIC,7,4,32,8
+    EDITTEXT        IDC_MAX_POLY,43,2,40,14,ES_AUTOHSCROLL
+    CONTROL         "Auto Start",IDC_AUTO_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    BS_NOTIFY | WS_TABSTOP,7,100,49,10
+    CONTROL         "Close all other apps on activation",IDC_CLOSE_OTHER_APP,
+                    "Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,7,110,
+                    122,10
+    CONTROL         "Respond to IR-Control information",IDC_RESPOND_IR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,121,126,10
+    EDITTEXT        IDC_SONG_DELAY,81,82,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Delay between songs:",IDC_STATIC,7,84,72,8
+    LTEXT           "ms",IDC_STATIC,120,84,10,8
+    PUSHBUTTON      "&OK",IDOK,7,136,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,80,136,50,14
+END
+
+IDD_OPTIONS_LS DIALOG DISCARDABLE  0, 0, 182, 108
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Options"
+FONT 8, "System"
+BEGIN
+    COMBOBOX        IDC_COMBO1,7,27,54,30,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,63,27,54,30,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Output Port 1",IDC_STATIC,7,17,48,8
+    LTEXT           "Output Port 2",IDC_STATIC,64,17,48,8
+    LTEXT           "SoftSynt: Min. Volume",IDC_STATIC,7,4,72,8
+    EDITTEXT        IDC_EDIT1,81,2,22,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "%",IDC_STATIC,105,4,10,8
+    LTEXT           "COM Port Delay",IDC_STATIC,119,17,52,8
+    EDITTEXT        IDC_EDIT2,120,27,38,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "ms",IDC_STATIC,161,30,10,8
+    LTEXT           "Max Poly:",IDC_STATIC,119,4,32,8
+    EDITTEXT        IDC_MAX_POLY,153,2,22,14,ES_AUTOHSCROLL
+    CONTROL         "Auto Start",IDC_AUTO_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    BS_NOTIFY | WS_TABSTOP,7,57,49,10
+    CONTROL         "Close all other programs on player-activation",
+                    IDC_CLOSE_OTHER_APP,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | 
+                    WS_TABSTOP,7,67,159,10
+    CONTROL         "Respond to IR-Control information",IDC_RESPOND_IR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,77,126,10
+    EDITTEXT        IDC_SONG_DELAY,81,42,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Delay between songs:",IDC_STATIC,7,44,72,8
+    LTEXT           "ms",IDC_STATIC,120,44,10,8
+    PUSHBUTTON      "&OK",IDOK,25,89,50,12
+    PUSHBUTTON      "&Cancel",IDCANCEL,106,89,50,12
+END
+
+IDD_CHANNEL_LS DIALOG DISCARDABLE  0, 0, 186, 111
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Channels"
+FONT 8, "System"
+BEGIN
+    CONTROL         "1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,20,15,11
+    CONTROL         "2",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,34,15,11
+    CONTROL         "3",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,48,15,11
+    CONTROL         "4",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,62,15,11
+    CONTROL         "5",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,76,15,11
+    CONTROL         "6",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,7,90,15,11
+    CONTROL         "7",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,62,20,19,11
+    CONTROL         "8",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,62,34,19,11
+    CONTROL         "9",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | BS_RIGHTBUTTON | 
+                    WS_TABSTOP,62,48,19,11
+    CONTROL         "10",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,62,62,19,11
+    CONTROL         "11",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,62,76,19,11
+    CONTROL         "12",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,62,90,19,11
+    CONTROL         "13",IDC_CHECK13,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,122,20,19,11
+    CONTROL         "14",IDC_CHECK14,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,122,34,19,11
+    CONTROL         "15",IDC_CHECK15,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,122,48,19,11
+    CONTROL         "16",IDC_CHECK16,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,122,62,19,11
+    LTEXT           "Solo",IDC_STATIC,26,7,14,8
+    LTEXT           "Chn",IDC_STATIC,9,7,13,8
+    LTEXT           "Solo",IDC_STATIC,84,7,13,8
+    LTEXT           "Chn",IDC_STATIC,67,7,13,8
+    PUSHBUTTON      "100",IDC_BUTTON1,42,20,18,10
+    PUSHBUTTON      "100",IDC_BUTTON2,42,34,18,10
+    PUSHBUTTON      "100",IDC_BUTTON3,42,48,18,10
+    PUSHBUTTON      "100",IDC_BUTTON4,42,62,18,10
+    PUSHBUTTON      "100",IDC_BUTTON5,42,76,18,10
+    PUSHBUTTON      "100",IDC_BUTTON6,42,90,18,10
+    PUSHBUTTON      "100",IDC_BUTTON7,101,20,18,10
+    PUSHBUTTON      "100",IDC_BUTTON8,101,34,18,10
+    PUSHBUTTON      "100",IDC_BUTTON9,101,48,18,10
+    PUSHBUTTON      "100",IDC_BUTTON10,101,62,18,10,WS_DISABLED
+    PUSHBUTTON      "100",IDC_BUTTON11,101,76,18,10
+    PUSHBUTTON      "100",IDC_BUTTON12,101,90,18,10
+    PUSHBUTTON      "100",IDC_BUTTON13,161,20,18,10
+    PUSHBUTTON      "100",IDC_BUTTON14,161,34,18,10
+    PUSHBUTTON      "100",IDC_BUTTON15,161,48,18,10
+    PUSHBUTTON      "100",IDC_BUTTON16,161,62,18,10
+    LTEXT           "Prog",IDC_STATIC,45,7,16,8
+    LTEXT           "Prog",IDC_STATIC,103,7,15,8
+    PUSHBUTTON      "S",IDC_BUTTON17,25,20,13,10
+    PUSHBUTTON      "S",IDC_BUTTON18,25,34,13,10
+    PUSHBUTTON      "S",IDC_BUTTON19,25,48,13,10
+    PUSHBUTTON      "S",IDC_BUTTON20,25,62,13,10
+    PUSHBUTTON      "S",IDC_BUTTON21,25,76,13,10
+    PUSHBUTTON      "S",IDC_BUTTON22,25,90,13,10
+    PUSHBUTTON      "S",IDC_BUTTON23,84,20,13,10
+    PUSHBUTTON      "S",IDC_BUTTON24,84,34,13,10
+    PUSHBUTTON      "S",IDC_BUTTON25,84,48,13,10
+    PUSHBUTTON      "S",IDC_BUTTON26,84,62,13,10
+    PUSHBUTTON      "S",IDC_BUTTON27,84,76,13,10
+    PUSHBUTTON      "S",IDC_BUTTON28,84,90,13,10
+    PUSHBUTTON      "S",IDC_BUTTON29,144,20,13,10
+    PUSHBUTTON      "S",IDC_BUTTON30,144,34,13,10
+    PUSHBUTTON      "S",IDC_BUTTON31,144,48,13,10
+    PUSHBUTTON      "S",IDC_BUTTON32,144,62,13,10
+    PUSHBUTTON      "Enable All",IDC_BUTTON33,136,87,43,12
+    LTEXT           "Solo",IDC_STATIC,143,7,13,8
+    LTEXT           "Chn",IDC_STATIC,126,7,13,8
+    LTEXT           "Prog",IDC_STATIC,164,7,15,8
+END
+
+IDD_ABOUTBOX_LS DIALOG DISCARDABLE  0, 0, 140, 153
+STYLE WS_POPUP | WS_CAPTION
+EXSTYLE 0x80000000L
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    CTEXT           "DECAP Herentals Midi Player",IDC_STATIC,17,7,104,8,
+                    SS_NOPREFIX
+    CTEXT           "http://www.focusbyte.com",IDC_STATIC,22,53,97,8
+    PUSHBUTTON      "&Register",IDC_REGISTER,44,74,50,14
+    LTEXT           "This program is registered.",IDC_LICENSED,26,63,96,8,
+                    NOT WS_VISIBLE
+    LTEXT           "www.decap-herentals.be",IDC_STATIC,29,18,85,8
+    LTEXT           "email: tony@decap.be",IDC_STATIC,37,29,73,8
+    LTEXT           "Powered by Focusbyte PowerSynth",IDC_STATIC,16,44,115,8
+END
+
+IDD_DIR_TREE_LS DIALOG DISCARDABLE  0, 0, 183, 111
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Add MIDI"
+FONT 8, "System"
+BEGIN
+    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,
+                    7,7,130,97
+    PUSHBUTTON      "&OK",IDOK,142,7,34,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,142,26,34,14
+END
+
+IDD_EDIT_PLAYLIST_LS DIALOG DISCARDABLE  0, 0, 184, 111
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Playlist"
+FONT 8, "System"
+BEGIN
+    LISTBOX         IDC_PLAYLIST,7,7,139,97,LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Up",IDC_MOVE_UP,150,7,27,14,WS_DISABLED
+    PUSHBUTTON      "Down",IDC_MOVE_DOWN,150,34,27,14,WS_DISABLED
+    PUSHBUTTON      "Del",IDC_DELETE,150,61,27,14,WS_DISABLED
+    PUSHBUTTON      "Sort",IDC_SORT,150,88,27,14
+END
+
+IDD_REGISTER_LS DIALOG DISCARDABLE  0, 0, 184, 111
+STYLE WS_POPUP | WS_CAPTION
+EXSTYLE 0x80000000L
+CAPTION "Please Register"
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT1,80,33,42,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,136,33,42,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_USERNAME,5,33,66,14,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "-",IDC_STATIC,124,35,10,8
+    DEFPUSHBUTTON   "&Unlock",IDOK,5,50,44,14
+    PUSHBUTTON      "&Remind me later",IDC_REMIND,56,50,72,14
+    PUSHBUTTON      "&Exit",IDCANCEL,134,50,44,14
+    LTEXT           "This software has not been registered.",IDC_STATIC,5,4,
+                    173,10
+    LTEXT           "If you have ordered this program, please enter here the provided registration code, then click ""Unlock"".",
+                    IDC_STATIC,5,67,173,18
+    LTEXT           "You have ? days left for evaluation.",IDC_TRIAL_LEFT,5,
+                    14,173,8
+    LTEXT           "Serial:",IDC_STATIC,5,23,21,8
+    LTEXT           "Reg. Code:",IDC_STATIC,80,23,38,8
+    LTEXT           "Send email to tony@decap.be with your name and the serial number shown above to order this program.",
+                    IDC_STATIC,5,87,173,17
+END
+
+IDD_SEL_PROG_LS DIALOG DISCARDABLE  0, 0, 182, 111
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Playlist"
+FONT 8, "System"
+BEGIN
+    LISTBOX         IDC_PLAYLIST,7,7,168,97,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+END
+
+IDD_IS_VOLUME_LS DIALOG DISCARDABLE  0, 0, 186, 111
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Instrument's Master Volume"
+FONT 8, "System"
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    WS_TABSTOP,13,23,160,20
+    PUSHBUTTON      "OK",IDOK,29,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,103,57,50,14
+    GROUPBOX        "Instrument's Master Volume",IDC_STATIC,7,7,172,41
+END
+
+IDD_IS_VOLUME DIALOG DISCARDABLE  0, 0, 137, 158
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Instrument's Master Volume"
+FONT 8, "System"
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    WS_TABSTOP,13,23,111,20
+    PUSHBUTTON      "OK",IDOK,7,58,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,80,58,50,14
+    GROUPBOX        "Instrument's Master Volume",IDC_STATIC,7,7,123,44
+END
+
+IDD_IS_MIDICHN_LS DIALOG DISCARDABLE  0, 0, 186, 111
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Instrument's Midi Channel"
+FONT 8, "System"
+BEGIN
+    COMBOBOX        IDC_COMBO1,24,21,80,83,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Set",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,30,50,14
+    GROUPBOX        "Instrument's Main-Midi Channel",IDC_STATIC,7,7,115,33
+    COMBOBOX        IDC_COMBO2,23,55,80,49,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Instrument's Sub-Midi Channel",IDC_STATIC,7,42,115,32
+    CONTROL         "ActiveSensing",IDC_ACTIVESENSING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,83,61,10
+END
+
+IDD_IS_MIDICHN DIALOG DISCARDABLE  0, 0, 137, 158
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Instrument's Midi Channel"
+FONT 8, "System"
+BEGIN
+    COMBOBOX        IDC_COMBO1,30,22,80,110,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Set",IDOK,7,107,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,80,108,50,14
+    GROUPBOX        "Instrument's Main-Midi Channel",IDC_STATIC,7,7,123,37
+    COMBOBOX        IDC_COMBO2,30,63,80,88,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Instrument's Sub-Midi Channel",IDC_STATIC,7,48,123,37
+    CONTROL         "ActiveSensing",IDC_ACTIVESENSING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,30,91,61,10
+END
+
+IDD_IS_MIDITHRU_LS DIALOG DISCARDABLE  0, 0, 186, 111
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Instrument's Midi Out Mode"
+FONT 8, "System"
+BEGIN
+    PUSHBUTTON      "Set",IDOK,7,83,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,83,50,14
+    PUSHBUTTON      "Store",IDC_STORE,68,83,50,14
+    CONTROL         "Echo partial midi-data on instrument's midi channel from PDA and Midi-In-Port (merged) on channel 1",
+                    IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | BS_MULTILINE,7,
+                    7,172,25
+    CONTROL         "Echo partial midi-data on all channels from PDA and Midi-In-Port (merged) on all channels",
+                    IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | BS_MULTILINE,7,
+                    33,172,18
+    CONTROL         "Echo all midi coming from PDA only",IDC_RADIO3,"Button",
+                    BS_AUTORADIOBUTTON | BS_MULTILINE,7,54,172,10
+    CONTROL         "Echo all midi coming from Midi-In-port only",IDC_RADIO4,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,7,68,172,10
+END
+
+IDD_IS_MIDITHRU DIALOG DISCARDABLE  0, 0, 137, 158
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Instrument's Midi Out Mode"
+FONT 8, "System"
+BEGIN
+    PUSHBUTTON      "Set",IDOK,7,115,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,80,137,50,14
+    PUSHBUTTON      "Store",IDC_STORE,80,115,50,14
+    CONTROL         "Echo partial midi-data on instrument's midi channel from PDA and Midi-In-Port (merged) on channel 1",
+                    IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | BS_MULTILINE,7,
+                    7,123,32
+    CONTROL         "Echo partial midi-data on all channels from PDA and Midi-In-Port (merged) on all channels",
+                    IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | BS_MULTILINE,7,
+                    41,123,32
+    CONTROL         "Echo all midi coming from PDA only",IDC_RADIO3,"Button",
+                    BS_AUTORADIOBUTTON | BS_MULTILINE,7,75,123,15
+    CONTROL         "Echo all midi coming from Midi-In-port only",IDC_RADIO4,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,7,92,123,17
+END
+
+IDD_IS_CP_LS DIALOG DISCARDABLE  0, 0, 186, 111
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Change Instrument's Pressure"
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT2,26,30,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT1,120,30,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Set",IDOK,7,55,50,14
+    PUSHBUTTON      "Store",IDC_STORE,68,55,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,55,50,14
+    LTEXT           "Min Pressure:",IDC_STATIC,25,19,44,8
+    LTEXT           "Max Pressure:",IDC_STATIC,118,19,47,8
+    GROUPBOX        "Instrument's Pressure(0-16383):",IDC_STATIC,7,7,172,43
+END
+
+IDD_IS_CP DIALOG DISCARDABLE  0, 0, 137, 158
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Instrument's Pressure"
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT2,71,19,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT1,71,37,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Set",IDOK,7,61,50,14
+    PUSHBUTTON      "Store",IDC_STORE,80,61,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,80,79,50,14
+    LTEXT           "Min Pressure:",IDC_STATIC,23,22,44,8
+    LTEXT           "Max Pressure:",IDC_STATIC,20,40,47,8
+    GROUPBOX        "Instrument's Pressure(0-16383):",IDC_STATIC,7,7,123,51
+END
+
+IDD_VOLUMES DIALOG DISCARDABLE  0, 0, 137, 157
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Advanced Options"
+FONT 8, "System"
+BEGIN
+    SCROLLBAR       IDC_SCROLLBAR1,7,18,123,11
+    SCROLLBAR       IDC_SCROLLBAR2,7,73,123,11
+    SCROLLBAR       IDC_SCROLLBAR3,7,100,123,11
+    LTEXT           "Master Mix Volume",IDC_STATIC,7,7,60,8
+    LTEXT           "Bass Extension Volume",IDC_STATIC,7,62,74,8
+    LTEXT           "Bass Extension Cutoff",IDC_STATIC,7,90,72,8
+    SCROLLBAR       IDC_SCROLLBAR4,7,44,123,11
+    LTEXT           "Mp3 Volume",IDC_STATIC,7,33,39,8
+END
+
+IDD_VOLUMES_LS DIALOG DISCARDABLE  0, 0, 182, 108
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Advanced Options"
+FONT 8, "System"
+BEGIN
+    SCROLLBAR       IDC_SCROLLBAR1,7,16,168,11
+    SCROLLBAR       IDC_SCROLLBAR2,87,64,88,11
+    SCROLLBAR       IDC_SCROLLBAR3,87,79,88,11
+    LTEXT           "Master Mix Volume",IDC_STATIC,7,4,60,8
+    LTEXT           "Bass Extension Volume",IDC_STATIC,7,66,74,8
+    LTEXT           "Bass Extension Cutoff",IDC_STATIC,7,80,72,8
+    SCROLLBAR       IDC_SCROLLBAR4,7,43,168,11
+    LTEXT           "Mp3 Volume",IDC_STATIC,7,32,39,8
+END
+
+IDD_CHAN_DELAY_LS DIALOG DISCARDABLE  0, 0, 186, 100
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Instrument's Delay"
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT1,17,3,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,17,18,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,17,33,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,17,48,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,61,3,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,61,18,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,61,33,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,61,48,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,109,3,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,109,18,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,109,33,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT12,109,48,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT13,153,3,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT14,153,18,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT15,153,33,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT16,153,48,26,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDCANCEL,149,81,30,14
+    LTEXT           "1",IDC_STATIC,7,4,10,8
+    LTEXT           "2",IDC_STATIC,7,19,10,8
+    LTEXT           "3",IDC_STATIC,7,34,10,8
+    LTEXT           "4",IDC_STATIC,7,49,10,8
+    LTEXT           "5",IDC_STATIC,51,4,10,8
+    LTEXT           "6",IDC_STATIC,51,19,10,8
+    LTEXT           "7",IDC_STATIC,51,34,10,8
+    LTEXT           "8",IDC_STATIC,51,49,10,8
+    LTEXT           "9",IDC_STATIC,96,4,10,8
+    LTEXT           "10",IDC_STATIC,96,19,10,8
+    LTEXT           "11",IDC_STATIC,96,34,10,8
+    LTEXT           "12",IDC_STATIC,96,49,10,8
+    LTEXT           "13",IDC_STATIC,141,4,10,8
+    LTEXT           "14",IDC_STATIC,141,19,10,8
+    LTEXT           "15",IDC_STATIC,141,34,10,8
+    LTEXT           "16",IDC_STATIC,141,49,10,8
+    LTEXT           "Compress Volume (MidiCtrl07). Examples:\nValue 127: no volume compression.\nValue 64: 50% volume compression.\nValue 0: 100% volume compression (Mute).",
+                    IDC_DESC1,7,63,143,32
+END
+
+IDD_CHAN_DELAY DIALOG DISCARDABLE  0, 0, 137, 158
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Instrument's Delay"
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT1,21,7,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,21,20,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,21,33,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,21,46,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,21,59,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,21,72,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,21,85,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,21,98,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT9,90,7,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,90,20,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,90,33,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT12,90,46,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT13,90,59,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT14,90,72,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT15,90,85,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT16,90,98,40,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDCANCEL,80,118,50,14
+    LTEXT           "1",IDC_STATIC,7,8,10,8
+    LTEXT           "2",IDC_STATIC,7,21,10,8
+    LTEXT           "3",IDC_STATIC,7,35,10,8
+    LTEXT           "4",IDC_STATIC,7,48,10,8
+    LTEXT           "5",IDC_STATIC,7,61,10,8
+    LTEXT           "6",IDC_STATIC,7,75,10,8
+    LTEXT           "7",IDC_STATIC,7,88,10,8
+    LTEXT           "8",IDC_STATIC,7,101,10,8
+    LTEXT           "9",IDC_STATIC,76,8,10,8
+    LTEXT           "10",IDC_STATIC,76,21,10,8
+    LTEXT           "11",IDC_STATIC,76,35,10,8
+    LTEXT           "12",IDC_STATIC,76,48,10,8
+    LTEXT           "13",IDC_STATIC,76,61,10,8
+    LTEXT           "14",IDC_STATIC,76,75,10,8
+    LTEXT           "15",IDC_STATIC,76,88,10,8
+    LTEXT           "16",IDC_STATIC,76,101,10,8
+END
+
+IDD_OPEN_PLAYLIST_LS DIALOG DISCARDABLE  0, 0, 184, 111
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Open Playlist"
+FONT 8, "System"
+BEGIN
+    LISTBOX         IDC_PLAYLIST,7,7,130,97,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Delete",IDC_DELETE,139,33,38,14,WS_DISABLED
+    PUSHBUTTON      "Open",IDOK,139,7,38,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,139,90,38,14
+    PUSHBUTTON      "Show Path",IDC_SHOWPATH,139,58,38,14
+END
+
+IDD_OPEN_PLAYLIST DIALOG DISCARDABLE  0, 0, 137, 157
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Open Playlist"
+FONT 8, "System"
+BEGIN
+    LISTBOX         IDC_PLAYLIST,7,7,123,125,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Delete",IDC_DELETE,32,136,26,14,WS_DISABLED
+    PUSHBUTTON      "Open",IDOK,7,136,23,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,103,136,27,14
+    PUSHBUTTON      "Show Path",IDC_SHOWPATH,60,136,41,14
+END
+
+IDD_COMPORT_LS DIALOG DISCARDABLE  0, 0, 182, 108
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "COM Port"
+FONT 8, "System"
+BEGIN
+    COMBOBOX        IDC_COMBO1,55,2,75,91,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,55,17,75,78,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Inbound:",IDC_STATIC,7,4,35,8
+    LTEXT           "Outbound:",IDC_STATIC,7,18,40,8
+    PUSHBUTTON      "&OK",IDOK,25,49,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,106,49,50,14
+    LTEXT           "BaudRate:",IDC_STATIC,7,33,40,8
+    COMBOBOX        IDC_COMBO3,55,32,75,78,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_COMPORT DIALOG DISCARDABLE  0, 0, 137, 157
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "COM Port"
+FONT 8, "System"
+BEGIN
+    COMBOBOX        IDC_COMBO1,55,2,75,108,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,55,17,75,102,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Inbound:",-1,7,4,35,8
+    LTEXT           "Outbound:",-1,7,19,40,8
+    PUSHBUTTON      "&OK",IDOK,44,49,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,44,68,50,14
+    LTEXT           "BaudRate:",-1,7,34,40,8
+    COMBOBOX        IDC_COMBO3,55,32,75,102,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_PIANO_CH1_SETTINGS_LS DIALOG DISCARDABLE  0, 0, 186, 100
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Piano CH1 Settings"
+FONT 8, "System"
+BEGIN
+    CONTROL         "Use Compression",IDC_USE_COMPRESSION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,23,71,10
+    LTEXT           "Real Piano on Midi-Channel 1 Volume-to-Velocity compression",
+                    IDC_STATIC,7,3,172,18
+    LTEXT           "Compress Minimum Velocity [1..127]:",IDC_STATIC,7,35,
+                    119,8
+    EDITTEXT        IDC_MIN_VELOCITY,129,33,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Minimum Threshold Volume [1..127]:",IDC_STATIC,9,53,117,
+                    8
+    EDITTEXT        IDC_MIN_THRESHOLD,129,50,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+END
+
+IDD_PIANO_CH1_SETTINGS DIALOG DISCARDABLE  0, 0, 137, 158
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Piano CH1 Settings"
+FONT 8, "System"
+BEGIN
+    LTEXT           "Real Piano on Midi-Channel 1 Volume-to-Velocity compression",
+                    IDC_STATIC,7,7,123,19
+    CONTROL         "Use Compression",IDC_USE_COMPRESSION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,31,71,10
+    LTEXT           "Compress Minimum Velocity [1..127]:",IDC_STATIC,7,46,
+                    119,8
+    EDITTEXT        IDC_MIN_VELOCITY,7,57,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Minimum Threshold Volume [1..127]:",IDC_STATIC,7,78,117,
+                    8
+    EDITTEXT        IDC_MIN_THRESHOLD,7,89,40,14,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_MODPLAYER ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            IDM_HELP_ABOUT,         VIRTKEY, CONTROL, NOINVERT
+    "Q",            IDOK,                   VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        ID_SONG_NEXT,           VIRTKEY, NOINVERT
+    VK_LEFT,        ID_SONG_STOP,           VIRTKEY, NOINVERT
+    VK_RIGHT,       ID_SONG_PLAY,           VIRTKEY, NOINVERT
+    VK_UP,          ID_SONG_PREV,           VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_EDIT_PLAYLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_REGISTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_SKIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_DIR_TREE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_CHANNEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_SEL_PROG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_OPTIONS_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_CHANNEL_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_ABOUTBOX_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_DIR_TREE_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 176
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_EDIT_PLAYLIST_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_REGISTER_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 178
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_SEL_PROG_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_IS_VOLUME_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_IS_VOLUME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_IS_MIDICHN_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_IS_MIDICHN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_IS_MIDITHRU_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_IS_MIDITHRU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_IS_CP_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_IS_CP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_VOLUMES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_VOLUMES_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_CHAN_DELAY_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_CHAN_DELAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_OPEN_PLAYLIST_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_OPEN_PLAYLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_COMPORT_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_COMPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_PIANO_CH1_SETTINGS_LS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_PIANO_CH1_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MENUBAR             BITMAP  DISCARDABLE     "menubar.bmp"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,11,0,0
+ PRODUCTVERSION 4,11,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "DECAP MIDI Player\0"
+            VALUE "CompanyName", "DECAP\0"
+            VALUE "FileDescription", "DECAP MIDI Player executable file\0"
+            VALUE "FileVersion", "4, 11, 0, 0\0"
+            VALUE "InternalName", "MidiPlayer\0"
+            VALUE "LegalCopyright", "Copyright (c) 2005-2011\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MidiPlayer.exe\0"
+            VALUE "PrivateBuild", "1\0"
+            VALUE "ProductName", "DECAP MIDI Player\0"
+            VALUE "ProductVersion", "4, 11, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONS DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 42, 0
+0x0049, 0x006e, 0x0074, 0x0065, 0x006c, 0x006c, 0x0069, 0x0041, 0x0072, 
+0x0074, 0x0020, 0x0053, 0x006f, 0x0066, 0x0074, 0x0053, 0x0079, 0x006e, 
+0x0074, 0x0068, 0x0000, 
+    0
+END
+
+IDD_OPTIONS_LS DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 42, 0
+0x0049, 0x006e, 0x0074, 0x0065, 0x006c, 0x006c, 0x0069, 0x0041, 0x0072, 
+0x0074, 0x0020, 0x0053, 0x006f, 0x0066, 0x0074, 0x0053, 0x0079, 0x006e, 
+0x0074, 0x0068, 0x0000, 
+    0
+END
+
+IDD_COMPORT_LS DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 4, 0
+0x0031, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0032, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0033, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0034, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0035, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0036, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0037, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0038, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0039, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0031, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0032, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0033, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0034, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0035, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0036, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0037, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0038, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0039, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0031, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0032, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0033, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0034, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0035, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0036, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0037, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0038, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0039, 0x0000, 
+    0
+END
+
+IDD_COMPORT DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 4, 0
+0x0031, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0032, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0033, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0034, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0035, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0036, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0037, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0038, 0x0000, 
+    IDC_COMBO1, 0x403, 4, 0
+0x0039, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0031, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0032, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0033, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0034, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0035, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0036, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0037, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0038, 0x0000, 
+    IDC_COMBO2, 0x403, 4, 0
+0x0039, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0031, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0032, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0033, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0034, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0035, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0036, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0037, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0038, 0x0000, 
+    IDC_COMBO3, 0x403, 4, 0
+0x0039, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "Midi Player"
+    IDC_MODPLAYER           "MIDIPLAYER"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_HELP_ABOUT          "About"
+    IDS_EXIT                "X"
+    ID_PL_ADD               "Add file to playlist"
+    ID_PL_OPEN              "Open playlist"
+    ID_PL_SAVE              "Save playlist"
+    ID_PL_EDIT              "Edit playlist"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_PL_NEW               "New playlist"
+    40017                   "New playlist"
+    ID_SKIN                 "Change Skin"
+    IDS_APP_EXIT            "Exit"
+    ID_MENU                 "Menu"
+    IDS_MENUITEM40028       "Menu"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_REVERB               "Reverb"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_CHANNEL              "Channels"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
